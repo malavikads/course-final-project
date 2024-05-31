@@ -1,0 +1,32 @@
+body {
+    font-family: "Arial", sans-serif;
+    background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20240310/pngtree-beautiful-maldives-travel-destination-generative-ai-image_15639253.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    font-family: "Helvetica", sans-serif;
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 10px;
+}

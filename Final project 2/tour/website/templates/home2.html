@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wonder Tours</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #f4f4f4;
+            padding: 10px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .banner {
+            background-image:url('https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?cs=srgb&dl=pexels-jaime-reimer-1376930-2662116.jpg&fm=jpg');
+            background-size: cover;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+        }
+        .banner h1 {
+            font-size: 48px;
+        }
+        .banner p {
+            font-size: 24px;
+        }
+        .content {
+            margin-top: 40px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Wonder Tours</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{% url 'vendor' %}">Vendor</a></li>
+            <li><a href="{% url 'tours' %}">Tours</a></li>
+            <li><a href="{% url 'edu' %}">About Us</a></li>
+            <li><a href="{% url 'edu' %}">Contact</a></li>
+            {% if request.user.is_authenticated %}
+            <li><a href="{% url 'logouts' %}" class="btn">Logout</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    <div class="banner">
+        <div>
+            <h1>Explore the World</h1>
+            <p>Find your next adventure with us</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="content">
+            <h2>Welcome to Wonder Tours!</h2>
+            <p>Discover breathtaking destinations, thrilling activities, and unforgettable experiences.</p>
+            <p>Book your adventure today!</p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Wonder Tours. Educational Project.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://images.pexels.com/photos/2675268/pexels-photo-2675268.jpeg?cs=srgb&dl=pexels-silvia-trigo-545701-2675268.jpg&fm=jpg');
+            background-size:cover;
+            background-position:center;
+            margin: 0;
+            padding: 0 200px;
+            display: flex;
+            justify-content: left 50%;
+            align-items: center;
+            height: 100vh;
+        }
+        form {
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+
+        }
+        h2,h6 {
+            text-align: center;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            opacity:1;
+        }
+        input[type="submit"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+            opacity:1;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .error {
+            color: red;
+            font-size: 0.9em;
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<h2>Sign Up</h2>
+<h6>Hi New Member:)</h6>
+    <form method="post">
+        {% csrf_token %}
+
+
+        {{ form.as_p }}
+        <input type="submit" value="Sign Up">
+    </form>
+</body>
+</html>

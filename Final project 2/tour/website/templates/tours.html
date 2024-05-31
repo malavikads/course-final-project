@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        .btn-book {
+            display: block;
+            width: 120px;
+            margin: 10px auto;
+            padding: 10px;
+            text-align: center;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .btn-book:hover {
+            background-color: #0056b3;
+        }
+        .destination-img {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<h1 align="center">Tours</h1>
+    <div class="container">
+        <img src="https://t3.ftcdn.net/jpg/01/40/51/56/360_F_140515612_0MMpqpsIvs6xno5YXmPVy9FUmZ4uLnFB.jpg" alt="Goa" class="destination-img">
+        <h2>Goa</h2>
+        <p>Goa is a state in western India with coastlines stretching along the Arabian Sea. Its long history as a Portuguese colony prior to 1961 is evident in its preserved 17th-century churches and the area's tropical spice plantations.</p>
+        <h6>COST:2000 PER PERSON</h6>
+        <a href="{% url 'payup' %}" class="btn-book">Book Now</a>
+    </div>
+
+    <div class="container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Shimla_49_Image8.jpg" alt="Shimla" class="destination-img">
+        <h2>Shimla</h2>
+        <p>Shimla is the capital of the northern Indian state of Himachal Pradesh, in the Himalayan foothills. It's also known for the handicraft shops that line The Mall, a pedestrian avenue, as well as the Lakkar Bazaar, a market specializing in wooden toys and crafts.</p>
+        <h6>COST:6000 PER PERSON</h6>
+        <a href="{% url 'payup' %}" class="btn-book">Book Now</a>
+    </div>
+
+    <div class="container">
+        <img src="https://thumbs.dreamstime.com/b/namma-chennai-letters-icon-namma-chennai-aka-our-chennai-letters-as-icon-chennai-marina-as-landmark-211052024.jpg" alt="Chennai" class="destination-img">
+        <h2>Chennai</h2>
+        <p>Chennai is the capital of the Indian state of Tamil Nadu. Located on the Coromandel Coast off the Bay of Bengal, it is one of the biggest cultural, economic, and educational centers in South India.</p>
+        <h6>COST:5000 PER PERSON</h6>
+        <a href="{% url 'payup' %}" class="btn-book">Book Now</a>
+    </div>
+</body>
+</html>
